@@ -23,20 +23,19 @@ You can also test drive K8S in a temporory environment on Kubernetes playground 
 
 Kubectl needs a config file to interact with the cluster components. By default it looks for the config file in `~/.kube/config`. Copy the file available at `/scratch/services/kubernetes/config/config` to your `~/.kube` directory. 
 
-First few commands : 
+    First few commands : 
 
-`$ kubectl get nodes` - to list the nodes available in the cluster.
+    `$ kubectl get nodes` - to list the nodes available in the cluster.
+    
+    `$ kubectl get pods` - to list the current pods running on the cluster.
 
-`$ kubectl get pods` - to list the current pods running on the cluster.
+    `$ kubectl get deployments` - to list current deployments
 
-`$ kubectl get deployments` - to list current deployments
-
-`$ kubectl get services` - to list the services and the port on which they are running
+    `$ kubectl get services` - to list the services and the port on which they are running
 
 ### How to run your containers/services on Kubernetes
 
-* Create a container image and push it to lab container registry 
-    
+* Create a container image and push it to lab container registry  
 * Run a sanity check  to test if the container image is visible to other hosts on the cluster
 * deploy the image on the cluster
 * expose the service to lab network
@@ -56,6 +55,7 @@ Also, in many cases you would want multiple containers/pods to share information
 ### Kubernetes DNS (To be expanded)
 [https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
 
+
 Assign CPU and Memory Resources to Containers and Pods
     - https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/
     - https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/
@@ -63,3 +63,4 @@ Storage Management
 
 Assign Pods to Nodes
     - https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/
+
